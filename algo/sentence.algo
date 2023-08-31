@@ -1,0 +1,38 @@
+// 1. Set counters for the length of the sentence, number of words, and number of vowels to zero.
+// 2. Read a sentence from the user as input.
+// 3. For each character in the sentence, do:
+//    a. Increment the length counter.
+//    b. If the character is a letter, check if it is a vowel (a, e, i, o, u). If it is, increment the vowel counter.
+//    c. If the character is a space, increment the word counter.
+// 4. Subtract 1 from the length counter to exclude the point character.
+// 5. Output the length of the sentence.
+// 6. Output the number of words in the sentence (add 1 to the word counter).
+// 7. Output the number of vowels in the sentence.
+// 8. End the algorithm.
+
+length = 0
+words = 0
+vowels = 0
+sentence = readInput() 
+// read input sentence as string
+
+for each character in sentence:
+    increment length by 1
+
+    if character is a space:
+        increment words by 1
+
+    if character is a vowel:
+        increment vowels by 1
+
+// increment words by 1 for the point
+
+print "Length of the sentence:", length
+print "Number of words:", words+1
+print "Number of vowels:", vowels
+
+
+
+
+
+
