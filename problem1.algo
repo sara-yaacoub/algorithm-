@@ -1,0 +1,57 @@
+
+
+
+function findDistinctSum(set1, set2) {
+ sum: INTEGER := 0;
+
+  // Check each element of set1 with set2
+  for (let i = 0; i < set1.length; i++) {
+    if (!set2.includes(set1[i])) {
+      sum += set1[i];
+    }
+  }
+
+  // Check each element of set2 with set1
+  for (let i = 0; i < set2.length; i++) {
+    if (!set1.includes(set2[i])) {
+      sum += set2[i];
+    }
+  }
+
+  return sum;
+}
+
+// Example usage
+const set1 = [3, 1, 7, 9];
+const set2 = [2, 4, 1, 9, 3];
+const distinctSum = findDistinctSum(set1, set2);
+console.log(distinctSum); // Output: 13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// trial
+
+// tab: set1 : ARRAY_OF INTEGER[4];
+// tab: set2 : ARRAY_OF INTEGER[5];
+// i : INTEGER
+// j : INTEGER
+
+// BEGIN
+// tab: set1 := {3, 1, 7, 9}
+// tab: set2 := [2, 4, 1, 9, 3];
+
+// FOR i FROM 
+// IF 

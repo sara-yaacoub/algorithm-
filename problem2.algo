@@ -1,0 +1,43 @@
+# Define the dot_product procedure
+def dot_product(v1, v2):
+    ps = 0
+    for index in range(len(v1)):
+        # Calculate the dot product of v1 and v2
+        ps += v1[index] * v2[index]
+    return ps
+
+# Define the is_orthogonal algorithm using a procedure
+def is_orthogonal_procedure(vectors):
+    for pair in vectors:
+        v1 = pair[0]
+        v2 = pair[1]
+        dot_product_result = dot_product(v1, v2)
+        
+        # Check if the dot product is zero
+        if dot_product_result == 0:
+            print(f"The vectors {v1} and {v2} are orthogonal")
+        else:
+            print(f"The vectors {v1} and {v2} are not orthogonal")
+
+# Define the is_orthogonal algorithm using a function
+def is_orthogonal_function(vectors):
+    for pair in vectors:
+        v1 = pair[0]
+        v2 = pair[1]
+        dot_product_result = dot_product(v1, v2)
+        
+        # Check if the dot product is zero
+        if dot_product_result == 0:
+            print(f"The vectors {v1} and {v2} are orthogonal")
+        else:
+            print(f"The vectors {v1} and {v2} are not orthogonal")
+    
+# Example usage
+# Create an array of vector pairs
+vectors = [[[1, 2, 3], [4, 5, 6]], [[0, 1, 0], [1, 0, 0]], [[-1, 0, 1], [1, 0, -1]]]
+
+# Call the is_orthogonal_procedure algorithm
+is_orthogonal_procedure(vectors)
+
+# Call the is_orthogonal_function algorithm
+is_orthogonal_function(vectors)
